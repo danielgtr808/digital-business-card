@@ -1,9 +1,15 @@
 @import url('./reset.css');
 
 :root {
+    /*
+        c = color
+        bg = background
+        p = primary
+    */
     --c-bg-10: #23252C;
     --c-bg-50: #1A1B21;
     --c-bg-90: #161619;
+    --c-p-10: #F3BF99;
 }
 
 html, body, #root {
@@ -18,14 +24,147 @@ html, body, #root {
     justify-content: center;
 }
 
+.blue-button {
+    background-color: #5093E2;
+    color: white;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 125%;
+    outline: none;
+    padding: 8px;
+}
+
+.contact-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-info__contact-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+
+.contact-info__contact-buttons > * {
+    flex: 1;
+}
+
+.contact-info__person-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.card-topic {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-topic__content {
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
 .card-wrapper {
     background-color: var(--c-bg-50);
     border-radius: 12px;
-    height: 300px;
+    color: white;
+    gap: 32px;
+    overflow: hidden;
     width: 320px;
+}
+
+.card-wrapper__person-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
 }
 
 .card-wrapper__profile-picture {
     aspect-ratio: 1;
     width: 100%;
+}
+
+.card-wrapper__social-buttons {
+    align-items: center;
+    background-color: var(--c-bg-90);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+}
+
+.card-wrapper__topics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.facebook-icon {
+    background-image: url('./assets/svg/facebook-icon.svg');
+    height: 24px;
+    width: 24px;
+}
+
+.github-icon {
+    background-image: url('./assets/svg/github-icon.svg');
+    height: 24px;
+    width: 24px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+h3 {
+    color: var(--c-p-10);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+h4 {
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.instagram-icon {
+    background-image: url('./assets/svg/instagram-icon.svg');
+    height: 24px;
+    width: 24px;
+}
+
+.twitter-icon {
+    background-image: url('./assets/svg/twitter-icon.svg');
+    height: 24px;
+    width: 24px;
+}
+
+.white-button {
+    background-color: white;
+    color: #374151;
 }
