@@ -12,5 +12,20 @@ html, body, #root {
 }
 
 #root {
+    align-items: center;
     background-color: var(--c-bg-10);
+    display: flex;
+    justify-content: center;
+}
+
+.card-wrapper {
+    background-color: var(--c-bg-50);
+    border-radius: 12px;
+    height: 300px;
+    width: 320px;
+}
+
+.card-wrapper__profile-picture {
+    aspect-ratio: 1;
+    width: 100%;
 }
