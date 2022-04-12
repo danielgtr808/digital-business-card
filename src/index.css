@@ -1,5 +1,23 @@
 @import url('./reset.css');
 
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('./assets/fonts/Inter-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url('./assets/fonts/Inter-Medium.ttf')
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 700;
+    src: url('./assets/fonts/Inter-Bold.ttf')
+}
+
 :root {
     /*
         c = color
@@ -13,6 +31,8 @@
 }
 
 html, body, #root {
+    font-family: 'Inter';
+    font-size: 125%;
     height: 100%;
     width: 100%;
 }
@@ -24,95 +44,43 @@ html, body, #root {
     justify-content: center;
 }
 
-.blue-button {
-    background-color: #5093E2;
-    color: white;
-}
+/*
+ *  Buttons
+ */
 
 .btn {
+    align-items: center;
     border: none;
     border-radius: 8px;
+    display: flex;
+    flex-direction: row;
     font-size: 0.875rem;
     font-weight: 500;
+    gap: 8px;
+    justify-content: center;
     line-height: 125%;
     outline: none;
     padding: 8px;
 }
 
-.contact-info {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.contact-info__contact-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    width: 100%;
-}
-
-.contact-info__contact-buttons > * {
-    flex: 1;
-}
-
-.contact-info__person-data {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-}
-
-.card-topic {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.card-topic__content {
-    font-size: 0.625rem;
-    font-weight: 400;
-    line-height: 150%;
-}
-
-.card-wrapper {
-    background-color: var(--c-bg-50);
-    border-radius: 12px;
+.blue-button {
+    background-color: #5093E2;
     color: white;
-    gap: 32px;
-    overflow: hidden;
-    width: 320px;
 }
 
-.card-wrapper__person-info {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 32px;
+.white-button {
+    background-color: white;
+    color: #374151;
 }
 
-.card-wrapper__profile-picture {
-    aspect-ratio: 1;
-    width: 100%;
-}
+/*
+ * Icons
+ */
 
-.card-wrapper__social-buttons {
-    align-items: center;
-    background-color: var(--c-bg-90);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    justify-content: center;
-    padding: 24px;
-    width: 100%;
-}
-
-.card-wrapper__topics {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.email-icon {
+    background-image: url('./assets/svg/email-icon.svg');
+    height: 16px;
+    width: 16px;
 }
 
 .facebook-icon {
@@ -127,6 +95,115 @@ html, body, #root {
     width: 24px;
 }
 
+.linkedin-icon {
+    background-image: url('./assets/svg/linkedin-icon.svg');
+    height: 16px;
+    width: 16px;
+}
+
+.instagram-icon {
+    background-image: url('./assets/svg/instagram-icon.svg');
+    height: 24px;
+    width: 24px;
+}
+
+.twitter-icon {
+    background-image: url('./assets/svg/twitter-icon.svg');
+    height: 24px;
+    width: 24px;
+}
+
+/*
+ * CardTopic
+ */
+
+.card-topic {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-topic__content {
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/*
+ * CardWrapper
+ */
+
+.card-wrapper {
+    background-color: var(--c-bg-50);
+    border-radius: 12px;
+    color: white;
+    gap: 32px;
+    overflow: hidden;
+    width: 320px;
+}
+
+.card-wrapper__profile-picture {
+    aspect-ratio: 1;
+    width: 100%;
+}
+
+.card-wrapper__person-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+}
+
+.card-wrapper__topics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-wrapper__social-buttons {
+    align-items: center;
+    background-color: var(--c-bg-90);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+}
+
+/*
+ * ContactInfo
+ */
+
+.contact-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-info__person-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.contact-info__contact-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+
+.contact-info__contact-buttons > * {
+    flex: 1;
+}
+
+/*
+ * HTML elements
+ */
 h1 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -150,21 +227,4 @@ h4 {
     font-size: 0.625rem;
     font-weight: 400;
     line-height: 150%;
-}
-
-.instagram-icon {
-    background-image: url('./assets/svg/instagram-icon.svg');
-    height: 24px;
-    width: 24px;
-}
-
-.twitter-icon {
-    background-image: url('./assets/svg/twitter-icon.svg');
-    height: 24px;
-    width: 24px;
-}
-
-.white-button {
-    background-color: white;
-    color: #374151;
 }

@@ -7,8 +7,8 @@ function ContactInfo() {
                 <h4>laurasmith.website</h4>
             </div>
             <div className="contact-info__contact-buttons">
-                <button className="btn white-button">Email</button>
-                <button className="btn blue-button">Linkedin</button>
+                <button className="btn white-button"><div className="email-icon"></div> Email</button>
+                <button className="btn blue-button"><div className="linkedin-icon"></div> Linkedin</button>
             </div>
         </div>
     )
